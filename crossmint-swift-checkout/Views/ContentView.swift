@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Checkout
+import CrossmintCheckout
 
 struct ContentView: View {
     var body: some View {

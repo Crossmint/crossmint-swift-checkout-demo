@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B25E6332EC90EC100BFDDC1 /* CrossmintCheckout in Frameworks */ = {isa = PBXBuildFile; productRef = 3B25E6322EC90EC100BFDDC1 /* CrossmintCheckout */; };
+		3B7363622F4FC97500AE8BEE /* CrossmintCheckout in Frameworks */ = {isa = PBXBuildFile; productRef = 3B7363612F4FC97500AE8BEE /* CrossmintCheckout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B25E6332EC90EC100BFDDC1 /* CrossmintCheckout in Frameworks */,
+				3B7363622F4FC97500AE8BEE /* CrossmintCheckout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			);
 			name = "crossmint-swift-checkout";
 			packageProductDependencies = (
-				3B25E6322EC90EC100BFDDC1 /* CrossmintCheckout */,
+				3B7363612F4FC97500AE8BEE /* CrossmintCheckout */,
 			);
 			productName = "crossmint-ios-checkout";
 			productReference = 3B0B45CE2EC67AB700860A7F /* crossmint-swift-checkout.app */;
@@ -104,7 +104,7 @@
 			mainGroup = 3B0B45C52EC67AB700860A7F;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3B25E6312EC90EC100BFDDC1 /* XCRemoteSwiftPackageReference "crossmint-swift-sdk" */,
+				3B7363602F4FC97500AE8BEE /* XCRemoteSwiftPackageReference "crossmint-checkout-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3B0B45CF2EC67AB700860A7F /* Products */;
@@ -338,20 +338,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3B25E6312EC90EC100BFDDC1 /* XCRemoteSwiftPackageReference "crossmint-swift-sdk" */ = {
+		3B7363602F4FC97500AE8BEE /* XCRemoteSwiftPackageReference "crossmint-checkout-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Crossmint/crossmint-swift-sdk";
+			repositoryURL = "https://github.com/Crossmint/crossmint-checkout-swift";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3B25E6322EC90EC100BFDDC1 /* CrossmintCheckout */ = {
+		3B7363612F4FC97500AE8BEE /* CrossmintCheckout */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B25E6312EC90EC100BFDDC1 /* XCRemoteSwiftPackageReference "crossmint-swift-sdk" */;
+			package = 3B7363602F4FC97500AE8BEE /* XCRemoteSwiftPackageReference "crossmint-checkout-swift" */;
 			productName = CrossmintCheckout;
 		};
 /* End XCSwiftPackageProductDependency section */
