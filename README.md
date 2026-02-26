@@ -1,18 +1,20 @@
 # Crossmint Swift Checkout Example
 
-Example iOS app demonstrating the `CrossmintEmbeddedCheckout` component from the Crossmint Swift SDK.
+Example iOS app demonstrating the `CrossmintEmbeddedCheckout` component from the [CrossmintCheckout](https://github.com/Crossmint/crossmint-checkout-swift) Swift package.
 
 ## Installation
 
-This example always uses the latest version from the `main` branch of the [Crossmint Swift SDK](https://github.com/Crossmint/crossmint-swift-sdk).
+This example uses [`crossmint-checkout-swift`](https://github.com/Crossmint/crossmint-checkout-swift) — a standalone, lightweight Swift Package with zero external dependencies.
 
-To use a specific version in production, we recommend:
+Add it to your project via SPM:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Crossmint/crossmint-swift-sdk", branch: "main")
+    .package(url: "https://github.com/Crossmint/crossmint-checkout-swift", from: "1.0.0")
 ]
 ```
+
+Or in Xcode: **File > Add Package Dependencies** → paste `https://github.com/Crossmint/crossmint-checkout-swift`
 
 ## Integration Flow
 
@@ -64,7 +66,7 @@ Pass the `orderId`, `clientSecret`, and optional configuration to the component:
 
 ```swift
 import SwiftUI
-import Checkout
+import CrossmintCheckout
 
 CrossmintEmbeddedCheckout(
     orderId: "your-order-id",
@@ -118,7 +120,6 @@ Set up webhooks to receive real-time updates as the order progresses through pay
         "currency": "usd"
       }
     }
-    // ... full order object
   }
 }
 ```
@@ -165,23 +166,16 @@ See full documentation: [Get Order API](https://docs.crossmint.com/api-reference
 
 ## Available Properties
 
-### Currently Supported
-
 - `orderId` - Order identifier from create order API
 - `clientSecret` - Client secret from create order API
-- `payment` - Payment method configuration
-- `appearance` - UI customization options
+- `payment` - Payment method configuration (crypto, fiat, allowed methods)
+- `appearance` - UI customization (variables, rules for inputs/buttons/tabs)
 - `environment` - `.staging` or `.production`
 
-### Work in Progress
+### Not Yet Implemented
 
-The following properties are defined but not yet implemented:
-
-- `lineItems` - Line items configuration
+- `lineItems` - Client-side line items configuration
 - `recipient` - Recipient information
-- `apiKey` - Crossmint Client API Key
-
-**Note:** More fields will be added in future releases.
 
 ## Example
 
@@ -189,6 +183,7 @@ See `ContentView.swift` for a complete working example.
 
 ## Resources
 
+- [CrossmintCheckout Swift Package](https://github.com/Crossmint/crossmint-checkout-swift)
 - [Crossmint Documentation](https://docs.crossmint.com)
 - [Create Order API](https://docs.crossmint.com/api-reference/headless/create-order)
 - [Get Order API](https://docs.crossmint.com/api-reference/headless/get-order)
